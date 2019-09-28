@@ -41,7 +41,7 @@ body{
     margin:0px auto;
     display:flex;
     justify-content: space-around;
-    text-align:center;
+    
 }
 #charactersLeft{
     width:90%;
@@ -64,6 +64,7 @@ body{
 .character h4{
     padding:5px 0px;
     margin:0px;
+    text-align:center;
 }
 .character-image{
     width:100%;
