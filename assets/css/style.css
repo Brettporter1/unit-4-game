@@ -33,19 +33,57 @@ body{
 .mainGameContainer{
     display:flex;
     justify-content: space-around;
-    
+    flex-wrap:wrap;
+    margin:35px 0px;
 }
 #characterContainer{
-    width:60%;
+    width:90%;
     margin:0px auto;
+    display:flex;
+    justify-content: space-around;
+    text-align:center;
 }
-.character img{
+#charactersLeft{
+    width:90%;
+    margin:0px auto;
+    display:flex;
+    justify-content: space-around;
+    text-align:center;
+}
+.character{
     width:230px;
+    background:#000;
+    color:#fff;
+    margin:0px 15px;
+    padding:0px 15px;
+}
+.character:hover{
+    background:#7c4200;
+    cursor:pointer;
+}
+.character h4{
+    padding:5px 0px;
+    margin:0px;
+}
+.character-image{
+    width:100%;
+}
+.theChosenOnes{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin:35px auto;
+}
+.selected{
+    width:450px;
 }
 #versus{
     font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
-    font-size:36px;
+    font-size:46px;
     text-align:center;
+}
+button:focus{
+    outline:0;
 }
 #attackBtn{
     width:175px;
@@ -53,7 +91,7 @@ body{
     font-size:23px;
     border:none;
     border-radius:0px;
-    margin:15px auto;
+    margin:0px auto;
     text-transform:uppercase;
     letter-spacing: 0.2em;
     font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
@@ -64,4 +102,7 @@ body{
 #attackBtn:hover{
     background:#888;
     color:#000;
+}
+#attackBtn:active{
+    background:#a11717;
 }
