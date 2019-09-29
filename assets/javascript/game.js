@@ -61,12 +61,13 @@ var winner = function(){
 
 var loser = function(){
     $('.mainGameContainer').hide();
-    playerHealth = 'Dead';
+    theChosenOne.health = 'DECEASED';
     showCharacter(theChosenOne,'#loser', 'chosen');
     $('.chosenLoser').toggleClass('show hide');
 }
-// Put characters on the DOM in initial spot to start the game
+
 var showAllCharacters = function (charObject, location) {
+    // Put characters on the DOM in initial spot to start the game
         if (location === '#characterContainer') {
             $(location).empty();
             for (var key in charObject) {
@@ -76,13 +77,16 @@ var showAllCharacters = function (charObject, location) {
                 };
             }
         }
+        // Placement for first selected character
         if(location === '#selectedCharacter'){
             showCharacter(charObject, location, 'chosen');
         }
+        // Shows remaining characters to choose for brawl
         if(location === '#charactersLeft'){
             for (var i = 0; i < charObject.length;i++){
                 showCharacter(charObject[i], location, 'brawler');
             }
+            // Places opponent character
             $(document).on('click', '.brawler', function(){
                 var name = $(this).attr('id');
                 if($('#brawlBuddy').children().length === 0){
@@ -92,15 +96,18 @@ var showAllCharacters = function (charObject, location) {
                 }
             })
         }
+        // refreshes opponent health after attack is made
         if (location === 'theirDamage'){
             $('#brawlBuddy').empty();
             showCharacter(brawler, '#brawlBuddy', 'ready');
         }
+        // refreshes chosen characters health after attack is made
         if (location === 'myDamage'){
             $('#selectedCharacter').empty();
             showCharacter(theChosenOne, '#selectedCharacter', 'chosen');
         }
     };
+    // calls function for start of game
     showAllCharacters(characters,'#characterContainer');
 
 // selecting Character and pushing the remainder to the brawlChoices array
@@ -111,7 +118,6 @@ var showAllCharacters = function (charObject, location) {
             for(var key in characters){
                 if (key !== name){
                     brawlChoices.push(characters[key]);
-                    console.log(brawlChoices);
                 }
             }
             $('#characterContainer').hide();
@@ -133,7 +139,6 @@ var showAllCharacters = function (charObject, location) {
             else{
                 $('#brawlBuddy').empty();
                 winCount++
-                console.log(winCount)
                 if(winCount >= 3){
                     console.log('winner');
                 winner();
