@@ -9,10 +9,12 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     </head>
     <body>
+        <!-- header section Always displays -->
         <header>
             <h1 class="gameTitle">CELEBRITY JAIL BRAWL</h1>
             <h5 class="gameSubtitle">historical edition</h5>
         </header>
+        <!-- main content of game driven in by game.js -->
         <section class="mainGameContainer">
             <div id="characterContainer"></div>
             <div id="charactersLeft"></div>
@@ -25,8 +27,18 @@
                 <div id="brawlBuddy"></div>
             </div>
         </section>
-        <section id="winner"></section>
-        <section id="loser"></section>
+        <!-- winner screen only shows when the chosen player wins the game -->
+        <section  class="chosenWinner hide">
+            <div id="winner"></div>
+            <div class="winnerText"><h1>YOU WIN!</h1></div>
+            <button id="winnerPlayAgain">Play Again</button>
+        </section>
+        <!-- loser screen only shows when the chosen player loses all health -->
+        <section class="chosenLoser hide">
+                <div id="loser"></div>
+                <div class="loserText"><h1>YOU LOSE!</h1></div>
+                <button id="loserPlayAgain">Play Again</button>
+        </section>
         <script type="text/javascript" src="assets/javascript/game.js">
         
         </script>

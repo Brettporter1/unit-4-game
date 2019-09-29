@@ -65,6 +65,9 @@ body{
     padding:5px 0px;
     margin:0px;
     text-align:center;
+    font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2em;
+    text-transform:uppercase;
 }
 .character-image{
     width:100%;
@@ -105,5 +108,96 @@ button:focus{
     color:#000;
 }
 #attackBtn:active{
+    background:#a11717;
+}
+/* win and lose screen styles */
+.hide{
+    display:none!important;
+}
+.show{
+    display:block;
+}
+.chosenWinner {
+    text-align:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.chosenWinner .character{
+    width:330px;
+    margin:25px auto;
+    clear:both;
+}
+.winnerText{
+    width:100%;
+}
+.chosenWinner h1{
+    font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
+    color:#fff;
+    font-size:52px;
+    letter-spacing: 0.2em;
+}
+.chosenLoser {
+    text-align:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.chosenLoser .character{
+    width:330px;
+    margin:25px auto;
+    clear:both;
+}
+.loserText{
+    width:100%;
+}
+.chosenLoser h1{
+    font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
+    color:#701010;
+    font-size:52px;
+    letter-spacing: 0.2em;
+    text-shadow:0px 0px 8px #fff;
+}
+#winnerPlayAgain{
+    width:225px;
+    height:55px;
+    font-size:16px;
+    border:none;
+    border-radius:0px;
+    margin:0px auto;
+    text-transform:uppercase;
+    letter-spacing: 0.2em;
+    font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
+    background:#000;
+    color:#fff;
+    transition: background-color 0.5s linear;
+}
+#winnerPlayAgain:hover{
+    background:#888;
+    color:#000;
+}
+#winnerPlayAgain:active{
+    background:#a11717;
+}
+#loserPlayAgain{
+    width:225px;
+    height:55px;
+    font-size:16px;
+    border:none;
+    border-radius:0px;
+    margin:0px auto;
+    text-transform:uppercase;
+    letter-spacing: 0.2em;
+    font-family:'Alfa Slab One', Arial, Helvetica, sans-serif;
+    background:#000;
+    color:#fff;
+    transition: background-color 0.5s linear;
+}
+#loserPlayAgain:hover{
+    background:#888;
+    color:#000;
+}
+#loserPlayAgain:active{
     background:#a11717;
 }
