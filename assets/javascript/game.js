@@ -65,7 +65,7 @@ var loser = function(){
     showCharacter(theChosenOne,'#loser', 'chosen');
     $('.chosenLoser').toggleClass('show hide');
 }
-
+console.log(characters);
 var showAllCharacters = function (charObject, location) {
     // Put characters on the DOM in initial spot to start the game
         if (location === '#characterContainer') {
