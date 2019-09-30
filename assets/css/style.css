@@ -57,7 +57,7 @@ body{
     margin:0px 15px;
     padding:0px 15px;
 }
-.character:hover{
+#characterContainer .character:hover{
     background:#7c4200;
     cursor:pointer;
 }
